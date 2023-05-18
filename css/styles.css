@@ -16,6 +16,10 @@ body {
   font-family: "Pretendard-Regular";
 }
 
+ul {
+  list-style: none;
+}
+
 .bg {
   width: 100%;
   height: 50vh;
@@ -56,12 +60,12 @@ header {
 }
 
 .inner #title {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 #toggle {
-  width: 36px;
-  height: 36px;
+  width: 33px;
+  height: 33px;
   border: 1px solid white;
   border-radius: 50%;
   display: flex;
@@ -79,13 +83,41 @@ header {
   z-index: 2;
 }
 
-.icon {
-  width: 87.39px;
-  height: 30px;
-  text-align: right;
-}
-
 .icon img {
   width: 30px;
   height: 30px;
+}
+
+.bx-wrapper {
+  height: 25vh;
+  padding: 5px;
+}
+
+.bx-wrapper .bx-controls-direction a {
+  display: none;
+}
+.course {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.course li {
+  width: 33%;
+  height: 8vh;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  display: table;
+  border-collapse: collapse;
+  line-height: 10vh;
+}
+
+.course li:nth-child(3n) {
+  border-right: none;
+}
+
+.course_title {
+  padding: 5px;
 }

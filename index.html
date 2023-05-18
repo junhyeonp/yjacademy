@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>영진직업전문학교</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".bxslider").bxSlider({
+          minSlides: 2,
+          maxSlides: 4,
+          slideWidth: 500,
+          slideMargin: 10,
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="bg">
@@ -16,15 +30,33 @@
     </div>
     <header>
       <div class="inner">
-        <div id="title">YJ <small>ACADEMY</small></div>
         <div id="toggle">
           <span></span>
           <span></span>
         </div>
+        <div id="title">YJ <small>ACADEMY</small></div>
         <div class="icon">
           <img src="images/icons8-전화-50.png" alt="" />
         </div>
       </div>
     </header>
+    <section>
+      <ul class="course">
+        <li>전체과정</li>
+        <li>IT·SW</li>
+        <li>기계설계</li>
+        <li>디자인</li>
+        <li>용접</li>
+        <li>가구/공예</li>
+      </ul>
+      <ul class="bxslider">
+        <li><img src="images/electric.png" /></li>
+        <li><img src="images/design.png" /></li>
+        <li><img src="images/welding.png" /></li>
+        <li><img src="images/mechanic.png" /></li>
+        <li><img src="images/landscape.png" /></li>
+        <li><img src="images/furniture_craft.png" /></li>
+      </ul>
+    </section>
   </body>
 </html>
