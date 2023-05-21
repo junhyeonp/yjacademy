@@ -1,122 +1,295 @@
 /* reset */
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: "Pretendard-Regular";
+  font-family: 'Pretendard-Regular';
+  background: #fff;
+  color: #000;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a {
+  color: #262626;
+  text-decoration: none;
 }
 
 ul {
   list-style: none;
 }
 
-.bg {
+.maxwidth-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+header {
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   position: relative;
 }
 
-.bg video {
+header .bg-video {
   width: 100%;
-  height: inherit;
+  height: 100%;
   object-fit: cover;
 }
 
-.gradient {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  /* background: linear-gradient(360deg, white, gray); */
-  background-color: black;
-  opacity: 0.1;
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #8b00fe;
+  font-size: 15px;
+  border-radius: 5px;
 }
 
-header {
+.btn:hover {
+  opacity: 0.9;
+}
+
+header .btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Nav */
+nav {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  color: #fff;
-  height: 16vw;
-}
-
-.inner {
-  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
   width: 90%;
-  margin: 0 auto;
-  height: 16vw;
+  max-width: 1100px;
+  padding: 20px 0;
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 13px;
 }
 
-.inner #title {
-  font-size: 1.1em;
+.menu-btn {
+  cursor: pointer;
 }
 
-#toggle {
-  width: 33px;
-  height: 33px;
-  border: 1px solid white;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 8px;
-  align-items: center;
-}
-
-#toggle span {
-  content: "";
-  width: 15px;
-  height: 1.3px;
-  background-color: white;
-  z-index: 2;
-}
-
-.icon img {
-  width: 30px;
-  height: 30px;
-}
-
-.bx-wrapper {
-  padding: 5px;
-}
-
-.bx-wrapper .bx-controls-direction a {
-  display: none;
-}
-.course {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+nav a.search {
+  width: 22.75px;
+  height: 26.5px;
   text-align: center;
-  justify-content: center;
 }
 
-.course li {
-  width: 33%;
-  height: 60px;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  display: table;
-  border-collapse: collapse;
-  line-height: 10vh;
+nav .logo {
+  width: 200px;
+  margin-right: 35px;
 }
 
-.course li:nth-child(3n) {
-  border-right: none;
+.toggle-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#ddd, #fff);
+  padding: 60px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
 }
 
-.course_title {
-  padding: 5px;
+.toggle-menu.show {
+  display: block;
+}
+
+.menu-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.menu-wrapper a {
+  position: absolute;
+  top: 25px;
+}
+
+.main-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 70px 90px;
+  margin-top: 40px;
+  line-height: 1.7;
+}
+
+.main-menu li:hover h2 {
+  border-bottom: 1px solid #000;
+}
+
+.main-menu h2 {
+  margin-bottom: 5px;
+}
+
+.sub-menu li {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.sub-menu li:hover {
+  opacity: 1;
+}
+
+/* Portpolio */
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-top: 90px;
+  color: #333333;
+}
+
+section.portpolio {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  margin: 40px 0;
+}
+
+section.portpolio img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+section.portpolio h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+section.portpolio a {
+  display: inline-block;
+  padding-top: 10px;
+  color: #0068b8;
+  font-weight: bold;
+}
+
+section.portpolio a:hover i {
+  margin-left: 10px;
+}
+
+/* Course */
+section.course .course-menu {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  margin: 40px 0;
+}
+
+.course-menu li {
+  font-size: 19px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #eee;
+  color: #333333;
+}
+
+.course-menu li:hover {
+  opacity: 0.8;
+}
+
+swiper-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* K-Digital */
+section.k-digital {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url(https://www.bigdata-forest.kr/images/main/img-main-02.png)
+    no-repeat center center/cover;
+  margin: 80px 0;
+  border-radius: 5px;
+}
+
+.k-digital .content {
+  width: 45%;
+  padding: 50px 0 0 30px;
+  color: #fff;
+}
+
+.k-digital .content h2 {
+  font-size: 28px;
+}
+
+.k-digital .content p {
+  margin: 15px 0 20px;
+  font-size: 16px;
+}
+
+.k-digital .content a {
+  position: absolute;
+  color: #333333;
+  left: 40px;
+  bottom: 40px;
+}
+
+/* Follow */
+.follow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0 30px;
+  font-size: 20px;
+}
+
+.follow img {
+  width: 40px;
+}
+
+.follow * {
+  margin-right: 10px;
+}
+
+/* Footer */
+footer {
+  background: #f2f2f2;
+  color: #616161;
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+footer .copyright {
+  display: flex;
+  border-bottom: 1px solid #333333;
+  margin-bottom: 10px;
+}
+
+footer .copyright li {
+  margin-right: 20px;
+  font-size: 16px;
 }

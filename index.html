@@ -6,57 +6,294 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>영진직업전문학교</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css?_cacheOverride=1684634858144"
+    />
 
-    <script>
-      $(document).ready(function () {
-        $(".bxslider").bxSlider({
-          minSlides: 2,
-          maxSlides: 4,
-          slideWidth: 500,
-          slideMargin: 10,
-        });
-      });
-    </script>
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
-    <div class="bg">
-      <div class="gradient"></div>
-      <video muted playsinline autoplay loop>
+    <header>
+      <video class="bg-video" muted autoplay loop>
         <source src="video/yjjob.mp4" />
       </video>
-    </div>
-    <header>
-      <div class="inner">
-        <div id="toggle">
-          <span></span>
-          <span></span>
-        </div>
-        <div id="title">YJ <small>ACADEMY</small></div>
-        <div class="icon">
-          <img src="images/icons8-전화-50.png" alt="" />
-        </div>
-      </div>
+      <a href="#" class="btn">
+        상담신청 하기<i class="fas fa-chevron-right"></i>
+      </a>
     </header>
-    <section>
-      <ul class="course">
-        <li>전체과정</li>
-        <li>IT·SW</li>
-        <li>기계설계</li>
-        <li>디자인</li>
-        <li>용접</li>
-        <li>가구/공예</li>
-      </ul>
-      <ul class="bxslider">
-        <li><img src="images/electric.png" /></li>
-        <li><img src="images/design.png" /></li>
-        <li><img src="images/welding.png" /></li>
-        <li><img src="images/mechanic.png" /></li>
-        <li><img src="images/landscape.png" /></li>
-        <li><img src="images/furniture_craft.png" /></li>
-      </ul>
-    </section>
+
+    <nav>
+      <a class="menu-btn" href="#">
+        <i class="fas fa-bars fa-2x"></i>
+      </a>
+
+      <img class="logo" src="images/logo.png" alt="yjjob" />
+
+      <a class="search" href="#">
+        <i class="fas fa-search"></i>
+      </a>
+    </nav>
+
+    <div class="toggle-menu">
+      <div class="menu-wrapper">
+        <a class="cancel-btn" href="#">
+          <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <ul class="main-menu">
+          <li>
+            <h2>모집과정</h2>
+            <ul class="sub-menu">
+              <li>현재모집중인과정</li>
+              <li>대구국비지원 진행중인과정</li>
+              <li>연간모집과정</li>
+              <li>국민내일배움카드</li>
+              <li>국민취업지원제도</li>
+            </ul>
+          </li>
+          <li>
+            <h2>입학상담</h2>
+            <ul class="sub-menu">
+              <li>온라인접수</li>
+              <li>자주하는 질문</li>
+              <li>입학상담</li>
+              <li>접수상태확인</li>
+            </ul>
+          </li>
+          <li>
+            <h2>과정소개</h2>
+            <ul class="sub-menu">
+              <li>IT•SW</li>
+              <li>전기공사</li>
+              <li>기계설계</li>
+              <li>디자인</li>
+              <li>용접</li>
+              <li>공조냉동</li>
+              <li>조경</li>
+              <li>가구/공예</li>
+              <li>경영회계</li>
+              <li>패션봉제</li>
+            </ul>
+          </li>
+          <li>
+            <h2>취업센터</h2>
+            <ul class="sub-menu">
+              <li>업체 채용 소식</li>
+              <li>업무 협약 소식</li>
+              <li>취업 센터 소식</li>
+              <li>취업•수료 후기</li>
+            </ul>
+          </li>
+          <li>
+            <h2>커뮤니티</h2>
+            <ul class="sub-menu">
+              <li>영진소식</li>
+              <li>YJ 재능봉사단</li>
+              <li>직종소개</li>
+              <li>2023년 제12회 송암전</li>
+              <li>역대 송암전 수상작</li>
+              <li>학교에 바란다</li>
+            </ul>
+          </li>
+          <li>
+            <h2>학교소개</h2>
+            <ul class="sub-menu">
+              <li>인사말</li>
+              <li>조직도 및 연혁</li>
+              <li>교육시스템</li>
+              <li>시설안내</li>
+              <li>교직원 소개</li>
+              <li>오시는 길</li>
+              <li>교수 채용(상시)</li>
+            </ul>
+          </li>
+          <li>
+            <h2>회원메뉴</h2>
+            <ul class="sub-menu">
+              <li>설문조사</li>
+              <li>NCS평가</li>
+              <li>시험응시</li>
+              <li>회원가입</li>
+              <li>로그인</li>
+              <li>아이디/비밀번호 찾기</li>
+              <li>사이트맵</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="maxwidth-container">
+      <h2 class="section-title">portpolio</h2>
+      <section class="portpolio">
+        <div>
+          <img src="http://www.yjjob.or.kr/images/main/it-3.png" alt="" />
+          <h3>영화관 관리 플랫폼(웹,앱)</h3>
+          <p>
+            애플리케이션 설계, 인터페이스 구현, 서버 프로그램 구현, SQL 활용,
+            통합 구현 등
+          </p>
+          <a href="#">더 알아보기<i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div>
+          <img src="http://www.yjjob.or.kr/images/main/ki-3.gif" alt="" />
+          <h3>CAD/CAM 3D기계설계가공</h3>
+          <p>
+            동력전달요소 설계, 체결요소 설계, 3D형상모델링 작업, 3D형상모델링
+            검토, 도면 분석
+          </p>
+          <a href="#">더 알아보기<i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div>
+          <img src="http://www.yjjob.or.kr/images/main/yo-2.png" alt="" />
+          <h3>CO2, TIG, 피복아크용접사 양성</h3>
+          <p>CO2 용접, TIG 용접, 가스절단, 플라즈마 아크절단</p>
+          <a href="#">더 알아보기<i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div>
+          <img src="http://www.yjjob.or.kr/images/main/fa-1.png" alt="" />
+          <h3>스마트패션디자인</h3>
+          <p>
+            패션디자인 기획, 패션상품 개발구상, 패션디자인 개발, 패션상품 시제품
+            개발
+          </p>
+          <a href="#">더 알아보기<i class="fas fa-chevron-right"></i></a>
+        </div>
+      </section>
+
+      <h2 class="section-title">COURSE</h2>
+      <section class="course">
+        <ul class="course-menu">
+          <li>전체과정</li>
+          <li>IT•SW</li>
+          <li>전기PLC</li>
+          <li>기계설계</li>
+          <li>디자인</li>
+          <li>용접</li>
+          <li>공조냉동</li>
+          <li>조경/중장비</li>
+          <li>가구/공예</li>
+          <li>경영회계</li>
+          <li>패션봉제</li>
+          <li>인테리어</li>
+        </ul>
+
+        <swiper-container
+          class="mySwiper"
+          pagination="true"
+          pagination-clickable="true"
+          space-between="30"
+          slides-per-view="4"
+        >
+          <swiper-slide><img src="images/design.png" alt="" /></swiper-slide>
+          <swiper-slide><img src="images/electric.png" /></swiper-slide>
+          <swiper-slide><img src="images/furniture_craft.png" /></swiper-slide>
+          <swiper-slide><img src="images/information.png" /></swiper-slide>
+          <swiper-slide><img src="images/landscape.png" alt="" /></swiper-slide>
+          <swiper-slide><img src="images/mechanic.png" alt="" /></swiper-slide>
+          <swiper-slide><img src="images/welding.png" alt="" /></swiper-slide>
+          <swiper-slide><img src="images/fashion.png" alt="" /></swiper-slide>
+        </swiper-container>
+      </section>
+
+      <section class="k-digital">
+        <div class="content">
+          <h2>
+            빅데이터 분석과 UI구현을 위한 자바(Java), 파이썬 (Python) 개발자
+          </h2>
+          <p>
+            대용량의 데이터로부터 빅데이터 분석을 통해 유용한 정보를 찾고 목적에
+            따라 UI구현기술을 사용하여 보다 정확하고 효과적이게 데이터를
+            전달하는 전문력을 가질 수 있습니다.
+          </p>
+          <a href="#" class="btn">
+            신청하러 가기<i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="follow">
+        <a href="https://www.facebook.com/yjjob/" alt="facebook">
+          <img
+            src="http://www.yjjob.or.kr/data/banner/wzVEfAWEyQqQwSSDtBVB_1582087115.png"
+            alt=""
+          />
+        </a>
+        <a href="http://pf.kakao.com/_bItTxd" alt="kakaotalk">
+          <img
+            src="http://www.yjjob.or.kr/data/banner/UDqigZGEW5doZh0KVkyK_1582087165.png"
+            alt=""
+          />
+        </a>
+        <a href="https://www.instagram.com/yjjob8877" alt="instagram">
+          <img
+            src="http://www.yjjob.or.kr/data/banner/CL7glr7BqenPNRABVpf6_1603411157.png"
+            alt=""
+          />
+        </a>
+        <a href="https://blog.naver.com/yjjob8877" alt="naverblog">
+          <img
+            src="http://www.yjjob.or.kr/data/banner/i7YkK4s8jij9rqZyjvx8_1582100733.png"
+            alt=""
+          />
+        </a>
+        <a href="https://www.youtube.com/c/yjjob/videos" alt="youtube">
+          <img
+            src="http://www.yjjob.or.kr/data/banner/ihbgXxfvw9YQsPHklVhA_1679361241.png"
+            alt=""
+          />
+        </a>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <ul class="copyright">
+          <li>개인정보보호정책</li>
+          <li>메일주소무단수집거부</li>
+        </ul>
+        <p class="contact">
+          회사명 : 영진직업전문학교 대표자 : 곽승호, 차영숙 cha8877@hanmail.net
+          Tel : 053-983-8877 Fax : 053-722-2423 개인정보보호책임자 : 이동석
+          cha8877@hanmail.net Tel : 053-983-8877 사업자번호 : 502-95-07029<br />
+          701-835 대구광역시 동구 화랑로 525(용계동), 조경실습장 : 대구 동구
+          도동 806-21<br />
+          copyright © 대구국비지원 무료교육센터 영진직업전문학교. All Rights
+          Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
   </body>
 </html>
