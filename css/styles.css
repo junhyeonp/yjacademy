@@ -39,8 +39,9 @@ ul {
 /* Header */
 header {
   width: 100%;
-  height: 100vh;
+  height: 92vh;
   position: relative;
+  top: 8vh;
 }
 
 header .bg-video {
@@ -78,13 +79,23 @@ nav {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 1100px;
-  padding: 20px 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
+}
+
+nav.fixed {
+  position: fixed;
+}
+
+nav .nav-inner {
+  width: 80%;
+  height: 8vh;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 13px;
 }
 
 .menu-btn {
@@ -105,11 +116,10 @@ nav .logo {
 .toggle-menu {
   display: none;
   position: fixed;
-  top: 0;
+  top: 8vh;
   left: 0;
   background: linear-gradient(#ddd, #fff);
-  padding: 60px;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   z-index: 99;
   overflow-x: auto;
@@ -120,8 +130,8 @@ nav .logo {
 }
 
 .menu-wrapper {
-  width: 100%;
-  max-width: 1100px;
+  width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -207,12 +217,12 @@ section.course .course-menu {
   text-align: center;
   align-items: center;
   border-radius: 10px;
-  background: #eee;
+  background: #ddd;
   color: #333333;
 }
 
 .course-menu li:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 swiper-container img {
@@ -298,7 +308,7 @@ footer .copyright li {
 
 @media (max-width: 786px) {
   header {
-    height: 80vh;
+    height: 67vh;
   }
 
   .main-menu {
@@ -327,7 +337,11 @@ footer .copyright li {
 
 @media (max-width: 500px) {
   header {
-    height: 60vh;
+    height: 42vh;
+  }
+
+  section.portfolio h3 {
+    text-align: center;
   }
 
   section.portfolio {
