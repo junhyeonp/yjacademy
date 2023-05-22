@@ -110,8 +110,9 @@ nav .logo {
   background: linear-gradient(#ddd, #fff);
   padding: 60px;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 99;
+  overflow-x: auto;
 }
 
 .toggle-menu.show {
@@ -292,4 +293,21 @@ footer .copyright {
 footer .copyright li {
   margin-right: 20px;
   font-size: 16px;
+}
+
+@media (max-width: 786px) {
+  .main-menu {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .sub-menu {
+    display: none;
+  }
+  .sub-menu.show {
+    display: block;
+  }
+
+  header {
+    height: 80vh;
+  }
 }
