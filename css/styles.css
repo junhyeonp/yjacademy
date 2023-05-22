@@ -164,32 +164,32 @@ nav .logo {
   color: #333333;
 }
 
-section.portpolio {
+section.portfolio {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 25px;
   margin: 40px 0;
 }
 
-section.portpolio img {
+section.portfolio img {
   width: 100%;
   margin-bottom: 10px;
   border-radius: 5px;
 }
 
-section.portpolio h3 {
+section.portfolio h3 {
   font-size: 18px;
   margin-bottom: 8px;
 }
 
-section.portpolio a {
+section.portfolio a {
   display: inline-block;
   padding-top: 10px;
   color: #0068b8;
   font-weight: bold;
 }
 
-section.portpolio a:hover i {
+section.portfolio a:hover i {
   margin-left: 10px;
 }
 
@@ -279,6 +279,7 @@ footer {
 }
 
 .footer-inner {
+  width: 80%;
   max-width: 1100px;
   margin: 0 auto;
   line-height: 1.8;
@@ -296,6 +297,10 @@ footer .copyright li {
 }
 
 @media (max-width: 786px) {
+  header {
+    height: 80vh;
+  }
+
   .main-menu {
     grid-template-columns: 1fr;
     grid-gap: 10px;
@@ -307,7 +312,33 @@ footer .copyright li {
     display: block;
   }
 
+  section.portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section.course .course-menu {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  section.k-digital .content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 786px) {
   header {
-    height: 80vh;
+    height: 60vh;
+  }
+
+  section.portfolio {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  section.course .course-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section.k-digital .content p {
+    display: none;
   }
 }
